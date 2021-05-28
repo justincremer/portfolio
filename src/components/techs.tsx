@@ -1,3 +1,7 @@
 export const Techs: React.FC = (): JSX.Element => {
-  return <header>Techs</header>;
-}
+  return (
+	<div className="m-4">
+	  <header>Insert techs here</header>
+	</div>
+  );
+};

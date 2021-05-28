@@ -1,3 +1,7 @@
 export const Links: React.FC = (): JSX.Element => {
-	return <header>Links</header>;
-}
+  return (
+	<div className="m-4">
+	  <header>Insert links here</header>
+	</div>
+  );
+};
