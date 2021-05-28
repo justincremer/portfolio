@@ -1,10 +1,9 @@
-import { Title, Headshot, Links, Techs, Projects, Footer } from "../components";
+import { Title, Links, Techs, Projects, Footer } from "../components";
 
 export const Home: React.FC = (): JSX.Element => {
   return (
 	<div className="m-10">
-	  <Title />
-	  <Headshot />
+	  <Title name="Justin Cremer" title="Software Engineer" path="cat.jpg" />
 	  <Links />
 	  <Techs />
 	  <Projects />
