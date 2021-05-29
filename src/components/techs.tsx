@@ -1,6 +1,6 @@
 export const Techs: React.FC = (): JSX.Element => {
   return (
-	<div className="m-4">
+	<div className="bg-red-200">
 	  <header>Insert techs here</header>
 	</div>
   );

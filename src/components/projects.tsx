@@ -1,34 +1,34 @@
-export interface Project {
+interface Props {
   title: string;
   description: string;
   image?: string;
 }
 
-const Project: React.FC<Project> = ({
+const Project: React.FC<Props> = ({
   title,
   description,
   image,
 }): JSX.Element => {
   return (
-	<div className="m-3">
+	<div className="">
 	  <p className="text-xl">{title}</p>
-	  <img src={process.env.PUBLIC_URL + image} />
+	  <img src={process.env.PUBLIC_URL + image} alt="" />
 	  <p>{description}</p>
 	</div>
   );
 };
 
-interface ProjectsProps {
-  projects?: Array<Project>;
+interface ListProps {
+  projects?: Array<Props>;
 }
 
-export const Projects: React.FC<ProjectsProps> = ({
+export const Projects: React.FC<ListProps> = ({
   projects,
-}: ProjectsProps): JSX.Element => {
+}: ListProps): JSX.Element => {
   return (
-	<div className="m-4">
+	<div className="bg-blue-200">
 	  <header className="text-2xl">Projects</header>
-	  {projects!.map((p: Project) => (
+	  {projects!.map((p: Props) => (
 		<Project title={p.title} description={p.description} />
 	  ))}
 	</div>

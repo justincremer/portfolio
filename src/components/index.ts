@@ -1,8 +1,5 @@
-export { Title } from "./title";
-export { Links } from "./links";
+export { Header } from './header';
 export { Techs } from "./techs";
-
 export { Projects } from "./projects";
-export type {Project} from './projects';
-
 export { Footer } from "./footer";
+export { ScrollTop }from './scroll-top';
