@@ -20,19 +20,18 @@ const Headshot: React.FC<HeadshotProps> = ({
 interface TitleProps extends HeadshotProps {
   name: string;
   title: string;
-  path?: string;
+  image?: string;
 }
 
-export const Title: React.FC<TitleProps> = ({
-  name,
-  title,
-  path,
-}: TitleProps): JSX.Element => {
+export const Title: React.FC<TitleProps> = (
+  { name, title, image }: TitleProps,
+  ...rest: any
+): JSX.Element => {
   return (
-    <div className="text-right">
+    <div className="float-right text-right" {...rest}>
       <header className="text-4xl">{name}</header>
       <p className="text-md mb-6">{title}</p>
-      <Headshot path={path} />
+      <Headshot path={image} />
     </div>
   );
 };
