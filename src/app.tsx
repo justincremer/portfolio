@@ -13,8 +13,7 @@ export const App: React.FC = (): JSX.Element => {
   );
 };
 
-const about: string =
-  "WLdzQHpeCPrKguzrNExSbppDJQbqzypunZWnJXdafrNLwkiCphauaatGnRyTxHACwrHJWDmTNHJDkBjvWyzEviLMiDDnvkZrizviRPUCnHBbhSQjZMqzaBRLvQpHTpKfNuFCTpaSPLJiuRkkmrhnmwQaAXiUtTcYjnzzcQRKQaZVnGDiuednCbYRVBpGAzDwkgUHGaBcrkmmTYJwCDCDLHPrWUTCefJeLKQuqGXRiPphaSzZNNenzSKcFxuFDnvnBzxQRbiwZHxcxAXQgePREkvadKwCmAvxMGNdhqdJEGUpiCiyEvpWWiiPqGbiibbFdBMzqqYZWcGUrqwFQXSNUfcSRKtzGtPFziGHBWmRyQeMUKyvzEUZgVMAtyyTPHFgTiGhDCzXnwLWrVkFmqwUUetThhevqhqTztgMYnZSBrUHSSZtVfEPJerbMGZqLbDEHhJvtifCHRgeQNnqnTCNipVYdGVhjCMbTUKdfNvXpJLmHtmkDaQh";
+const about: string = genRandString(500);
 
 const links: any = [
   {
@@ -29,45 +28,29 @@ const links: any = [
   },
 ];
 
-const projects: any = [
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-  { title: "title", description: "description", image: "cat.jpg" },
-  { title: "title2", description: "description2" },
-];
+const projects = (function (n: number) {
+  let res = [];
+  for (let i = 0; i < n; i++) {
+    res.push({
+      title: "title" + (i + 1),
+      description: genRandString(500),
+    });
+  }
+  return res;
+})(15);
+/* [
+ *   { title: "title", description: genRandString(500), image: "cat.jpg" },
+ *   { title: "title2", description: genRandString(500) },
+ *   { title: "title3", description: genRandString(500) },
+ * ]; */
+
+function genRandString(length: number): string {
+  let res: string = "";
+  const allowed: string =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  for (let i = 0; i < length; i++) {
+    res += allowed[Math.floor(Math.random() * 53)];
+  }
+  return res;
+}
