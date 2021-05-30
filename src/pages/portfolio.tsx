@@ -4,82 +4,39 @@ import { PageWrapper } from "../wrappers";
 /* import * as toml from "toml"; */
 /* toml.parse; */
 
-export const Portfolio: React.FC = (): JSX.Element => {
+interface Props {
+  name: string;
+  title: string;
+  image: string;
+  about: string;
+  links: any;
+  projects: any;
+}
+
+export const Portfolio: React.FC<Props> = ({
+  name,
+  title,
+  image,
+  about,
+  links,
+  projects,
+}: Props): JSX.Element => {
   return (
 	<PageWrapper
 	  children={
 		<div>
 		  <Header
-			name="Justin Cremer"
-			title="Software Engineer"
-			image="cat.jpg"
+			name={name}
+			title={title}
+			image={image}
 			about={about}
 			links={links}
 		  />
 		  <Techs />
-		  <Projects
-			projects={[
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			  { title: "title", description: "description", image: "cat.jpg" },
-			  { title: "title2", description: "description2" },
-			]}
-		  />
+		  <Projects projects={projects} />
 		  <Footer />
 		</div>
 	  }
 	/>
   );
 };
-
-const about: string =
-  "WLdzQHpeCPrKguzrNExSbppDJQbqzypunZWnJXdafrNLwkiCphauaatGnRyTxHACwrHJWDmTNHJDkBjvWyzEviLMiDDnvkZrizviRPUCnHBbhSQjZMqzaBRLvQpHTpKfNuFCTpaSPLJiuRkkmrhnmwQaAXiUtTcYjnzzcQRKQaZVnGDiuednCbYRVBpGAzDwkgUHGaBcrkmmTYJwCDCDLHPrWUTCefJeLKQuqGXRiPphaSzZNNenzSKcFxuFDnvnBzxQRbiwZHxcxAXQgePREkvadKwCmAvxMGNdhqdJEGUpiCiyEvpWWiiPqGbiibbFdBMzqqYZWcGUrqwFQXSNUfcSRKtzGtPFziGHBWmRyQeMUKyvzEUZgVMAtyyTPHFgTiGhDCzXnwLWrVkFmqwUUetThhevqhqTztgMYnZSBrUHSSZtVfEPJerbMGZqLbDEHhJvtifCHRgeQNnqnTCNipVYdGVhjCMbTUKdfNvXpJLmHtmkDaQh";
-
-const links: any = [
-  {
-	url: "https://github.com/justincremer",
-	image: "https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg",
-	alt: "",
-  },
-  {
-	url: "https://github.com/justincremer",
-	image: "https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg",
-	alt: "",
-  },
-];
