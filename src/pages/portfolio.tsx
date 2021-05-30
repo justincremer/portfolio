@@ -1,15 +1,14 @@
 import { Header, Techs, Projects, Footer } from "../components";
 import { PageWrapper } from "../wrappers";
 
-/* import * as toml from "toml"; */
-/* toml.parse; */
-
 interface Props {
   name: string;
   title: string;
   image: string;
   about: string;
   links: any;
+  known: any;
+  workingOn: any;
   projects: any;
 }
 
@@ -19,6 +18,8 @@ export const Portfolio: React.FC<Props> = ({
   image,
   about,
   links,
+  known,
+  workingOn,
   projects,
 }: Props): JSX.Element => {
   return (
@@ -32,7 +33,7 @@ export const Portfolio: React.FC<Props> = ({
 			about={about}
 			links={links}
 		  />
-		  <Techs />
+		  <Techs known={known} workingOn={workingOn} />
 		  <Projects projects={projects} />
 		  <Footer />
 		</div>
