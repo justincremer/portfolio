@@ -1,4 +1,3 @@
-# Personal Portofolio
-## Written in React using Tailwindcss
-## Will be hosted on xiubox.io/justincremer once I sort out a forwarding latency issue with my awful router
-## TODO: Buy Cisco router
+# My Portofolio Website
+Written in React and styled with Tailwindcss.
+This will be hosted on xiubox.io/justincremer once I'm finished.
