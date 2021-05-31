@@ -1,52 +1,53 @@
-interface Props {
+export type Project = {
   title: string;
   description: string;
-  link: string | null;
+  url: string | null;
   image?: string;
-}
+};
 
-// TODO: get project links working
-const linkable = (title: string, link: string | null): JSX.Element => {
-  if (link !== null) {
+const link = (p: Project): JSX.Element => {
+  if (p.url !== null) {
 	return (
-	  <a href={link} target="blank" className="text-xl">
-		{title}
+	  <a href={p.url} target="blank" className="text-xl">
+		{p.title}
 	  </a>
 	);
   }
 
-  return <p className="text-xl">{title} hello</p>;
+  return <p className="text-xl">{p.title}</p>;
 };
 
-const Project: React.FC<Props> = ({
-  title,
-  description,
-  image,
-  link,
-}): JSX.Element => {
+interface Props {
+  project: Project;
+}
+
+const Project: React.FC<Props> = ({ project }: Props): JSX.Element => {
   return (
 	<div className="">
-	  {linkable(title, link)}
-	  <img src={process.env.PUBLIC_URL + image} alt="" />
-	  <p className="m-2 break-words">{description}</p>
+	  {link(project)}
+	  <img src={process.env.PUBLIC_URL + project.image} alt="" />
+	  <p className="m-2 break-words">{project.description}</p>
 	</div>
   );
 };
 
 interface ListProps {
-  projects?: Array<Props>;
+  projects?: Array<Project> | undefined;
 }
 
 export const Projects: React.FC<ListProps> = ({
   projects,
 }: ListProps): JSX.Element => {
-  return (
-	<div className="bg-blue-200">
-	  <header className="mb-4 text-2xl">Projects</header>
+  if (projects !== undefined) {
+	return (
+	  <div className="bg-blue-200">
+		<header className="mb-4 text-2xl">Projects</header>
 
-	  {projects!.map((p: Props) => (
-		<Project title={p.title} description={p.description} link={p.link} />
-	  ))}
-	</div>
-  );
+		{projects!.map((p: Project) => (
+		  <Project project={p} />
+		))}
+	  </div>
+	);
+  }
+  return <></>;
 };
