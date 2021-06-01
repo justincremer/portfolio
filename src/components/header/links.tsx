@@ -18,7 +18,7 @@ type Props = {
 
 export const Links: React.FC<Props> = ({ links }: Props): JSX.Element => {
   return (
-	<div className="flex bg-purple-200">
+	<div className="flex bg-purple-200 justify-evenly">
 	  {links!.map((l: Link) => (
 		<Link url={l.url} image={l.image} alt={l.alt} />
 	  ))}

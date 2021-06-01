@@ -1,0 +1,49 @@
+{
+	name: "Justin Cremer",
+	title: "Software Engineer",
+	image: "cat.jpg",
+	about: "Insert About here",
+	links: [
+		{
+			url: "https://github.com/justincremer",
+			image: "https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg",
+			alt: "",
+		},
+		{
+			url: "https://github.com/justincremer",
+			image: "https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg",
+			alt: "",
+		},
+	],
+	techs: {
+		known: [
+			{
+				name: "known 1",
+				link: "https://github.com/justincremer",
+			},
+			{
+				name: "known 2",
+				link: null,
+			},
+			{
+				name: "known 3",
+				link: "https://github.com/justincremer",
+			},
+		],
+		workingOn: [
+			{
+				name: "workingOn 1",
+				link: "https://github.com/justincremer",
+			},
+			{
+				name: "workingOn 2",
+				link: null,
+			},
+			{
+				name: "workingOn 3",
+				link: "https://github.com/justincremer",
+			},
+		],
+	},
+	projects: [],
+}

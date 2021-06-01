@@ -16,7 +16,11 @@ const link = (i: Tech): JSX.Element => {
 };
 
 const knownList = (known: Array<Tech>): JSX.Element => (
-  <div>{known.map((i: Tech) => link(i))}</div>
+  <div className="flex justify-evenly">
+	{known.map((i: Tech) => (
+	  <p>{link(i)}</p>
+	))}
+  </div>
 );
 
 const workingOnList = (known: Array<Tech>): JSX.Element => {
@@ -51,9 +55,9 @@ export const Techs: React.FC<TechList> = ({
   workingOn,
 }: TechList): JSX.Element => {
   return (
-	<div className="bg-red-200">
-	  {knownList(known)}
+	<>
+	  <div className="justify-evenly mb-4">{knownList(known)}</div>
 	  {workingOnList(workingOn)}
-	</div>
+	</>
   );
 };
