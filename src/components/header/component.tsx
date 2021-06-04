@@ -1,18 +1,19 @@
 import { About } from "./about";
 import { Title } from "./title";
-import { SectionWrapper } from "../../wrappers";
 
 interface Props {
   name: string;
   title: string;
-  about: string;
+  location?: string;
   image?: string;
+  about: string;
   links?: any;
 }
 
 export const Header: React.FC<Props> = ({
   name,
   title,
+  location,
   about,
   image,
   links,
@@ -23,7 +24,13 @@ export const Header: React.FC<Props> = ({
 		<About content={about} />
 	  </div>
 	  <div className="w-1/4">
-		<Title name={name} title={title} image={image} links={links} />
+		<Title
+		  name={name}
+		  title={title}
+		  location={location}
+		  image={image}
+		  links={links}
+		/>
 	  </div>
 	</div>
   );

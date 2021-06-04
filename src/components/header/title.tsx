@@ -1,10 +1,10 @@
 import { Image } from "./image";
 import { Links, Link } from "./links";
-import { SectionWrapper } from "../../wrappers/section";
 
 export interface Props {
   name: string;
   title: string;
+  location?: string;
   image?: string;
   links: Array<Link>;
 }
@@ -12,6 +12,7 @@ export interface Props {
 export const Title: React.FC<Props> = ({
   name,
   title,
+  location,
   image,
   links,
 }: Props): JSX.Element => {
@@ -19,10 +20,14 @@ export const Title: React.FC<Props> = ({
     <div className="float-right text-right">
       <header className="text-3xl">{name}</header>
       <p className="text-lg">{title}</p>
-      <div className="float-right flex pt-3">
-        <Links links={links} />
+
+      <div className="float-right flex pt-3 pb-2">
+        <div className="flex items-center justify-center">
+          <Links links={links} />
+        </div>
         <Image image={image} />
       </div>
+      {location ? <p className="text-md">{location}</p> : null}
     </div>
   );
 };

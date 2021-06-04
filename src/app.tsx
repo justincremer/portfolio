@@ -15,6 +15,7 @@ export const App: React.FC = (): JSX.Element => {
   const config: Config = {
     name: "Justin Cremer",
     title: "Software Engineer",
+    location: "San Diego, CA",
     image: "cat.jpg",
     about: genRandString(500),
     links: [
