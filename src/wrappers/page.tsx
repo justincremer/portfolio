@@ -6,10 +6,9 @@ interface Props {
 
 export const PageWrapper: React.FC<Props> = ({
   children,
-  ...rest
 }: Props): JSX.Element => (
-  <div {...rest} className="m-4">
+  <div>
 	<ScrollTop />
-	{children}
+	<div className=" m-16">{children}</div>
   </div>
 );

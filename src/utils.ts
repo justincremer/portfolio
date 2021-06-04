@@ -1,8 +1,4 @@
-import path from 'path';
-
-export function projectRoot(): string {
-	return path.resolve(__dirname);
-}
+export const  RootDir: string = __dirname;
 
 export function genRandString(length: number): string {
 	const allowed: string =

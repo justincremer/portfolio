@@ -1,22 +1,28 @@
 import { Image } from "./image";
+import { Links, Link } from "./links";
+import { SectionWrapper } from "../../wrappers/section";
 
 export interface Props {
   name: string;
   title: string;
   image?: string;
+  links: Array<Link>;
 }
 
 export const Title: React.FC<Props> = ({
   name,
   title,
   image,
-  ...rest
+  links,
 }: Props): JSX.Element => {
   return (
-    <div className="float-right text-right bg-green-200" {...rest}>
-      <header className="text-4xl">{name}</header>
-      <p className="text-md mb-6">{title}</p>
-      <Image path={image} />
+    <div className="float-right text-right">
+      <header className="text-3xl">{name}</header>
+      <p className="text-lg">{title}</p>
+      <div className="float-right flex pt-3">
+        <Links links={links} />
+        <Image image={image} />
+      </div>
     </div>
   );
 };

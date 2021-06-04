@@ -1,6 +1,5 @@
-import { PageWrapper } from "../wrappers";
-import { Header, Techs, Projects, Footer } from "../components";
-import type { Link, TechList, Project } from "../components";
+import { Header, Experience, Projects, Footer } from "../components";
+import type { Link, ExpList, Project } from "../components";
 
 export type Config = {
   name: string;
@@ -8,7 +7,7 @@ export type Config = {
   image: string;
   about: string;
   links?: Array<Link>;
-  techs: TechList;
+  experience: ExpList;
   projects?: Array<Project>;
 };
 
@@ -18,24 +17,26 @@ interface Props {
 
 export const Portfolio: React.FC<Props> = ({ config }: Props): JSX.Element => {
   return (
-	<PageWrapper
-	  children={
-		<div>
-		  <Header
-			name={config.name}
-			title={config.title}
-			image={config.image}
-			about={config.about}
-			links={config.links}
-		  />
-		  <Techs
-			known={config.techs.known}
-			workingOn={config.techs.workingOn}
-		  />
-		  <Projects projects={config.projects} />
-		  <Footer />
-		</div>
-	  }
-	/>
+	<div>
+	  <div id="Header" className="mb-8">
+		<Header
+		  name={config.name}
+		  title={config.title}
+		  image={config.image}
+		  about={config.about}
+		  links={config.links}
+		/>
+	  </div>
+	  <div id="Experience" className="mb-8">
+		<Experience
+		  known={config.experience.known}
+		  workingOn={config.experience.workingOn}
+		/>
+	  </div>
+	  <div id="Projects" className="mb-8">
+		<Projects projects={config.projects} />
+	  </div>
+	  <Footer />
+	</div>
   );
 };

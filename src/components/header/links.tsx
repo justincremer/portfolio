@@ -1,13 +1,13 @@
 export type Link = {
   url: string;
-  image: string;
-  alt: string;
+  icon: JSX.Element;
 };
 
-const Link: React.FC<Link> = ({ url, image, alt }: Link): JSX.Element => {
+const Link: React.FC<Link> = ({ url, icon }: Link): JSX.Element => {
   return (
 	<a href={url} target="blank">
-	  <img src={image} alt={alt} height="30" width="40" />
+	  {icon}
+	  {/* <img src={image} alt={alt} height="30" width="40" /> */}
 	</a>
   );
 };
@@ -18,9 +18,11 @@ type Props = {
 
 export const Links: React.FC<Props> = ({ links }: Props): JSX.Element => {
   return (
-	<div className="flex bg-purple-200 justify-evenly">
+	<div className="mr-3">
 	  {links!.map((l: Link) => (
-		<Link url={l.url} image={l.image} alt={l.alt} />
+		<div className="pb-3">
+		  <Link url={l.url} icon={l.icon} />
+		</div>
 	  ))}
 	</div>
   );

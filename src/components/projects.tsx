@@ -1,3 +1,6 @@
+import { SectionHeader } from "./section-header";
+import { SectionWrapper } from "../wrappers";
+
 export type Project = {
   title: string;
   description: string;
@@ -8,7 +11,7 @@ export type Project = {
 const link = (p: Project): JSX.Element => {
   if (p.url !== null) {
 	return (
-	  <a href={p.url} target="blank" className="text-xl">
+	  <a href={p.url} target="blank" className="text-xl hover:text-yellow-300">
 		{p.title}
 	  </a>
 	);
@@ -23,11 +26,15 @@ interface Props {
 
 const Project: React.FC<Props> = ({ project }: Props): JSX.Element => {
   return (
-	<div className="">
-	  {link(project)}
-	  <img src={process.env.PUBLIC_URL + project.image} alt="" />
-	  <p className="m-2 break-words">{project.description}</p>
-	</div>
+	<SectionWrapper
+	  children={
+		<div className="">
+		  {link(project)}
+		  <img src={process.env.PUBLIC_URL + project.image} alt="" />
+		  <p className="m-2 break-words text-md">{project.description}</p>
+		</div>
+	  }
+	/>
   );
 };
 
@@ -40,10 +47,9 @@ export const Projects: React.FC<ListProps> = ({
 }: ListProps): JSX.Element => {
   if (projects !== undefined) {
 	return (
-	  <div className="bg-blue-200">
-		<header className="mb-4 text-2xl">Projects</header>
-
-		{projects!.map((p: Project) => (
+	  <div>
+		<SectionHeader title="Projects" />
+		{projects.map((p: Project) => (
 		  <Project project={p} />
 		))}
 	  </div>
