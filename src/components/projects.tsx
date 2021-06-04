@@ -4,24 +4,25 @@ import { SectionWrapper } from "../wrappers";
 export type Project = {
   title: string;
   description: string;
-  url: string | null;
+  url?: string;
   image?: string;
 };
 
 const link = (p: Project): JSX.Element => {
-  if (p.url !== null) {
+  const body = <p className="px-2 text-xl">{p.title}</p>;
+  if (p.url) {
 	return (
 	  <a
 		href={p.url}
 		target="blank"
 		className="text-xl text-blue-800 hover:text-blue-500"
 	  >
-		{p.title}
+		{body}
 	  </a>
 	);
   }
 
-  return <p className="text-xl">{p.title}</p>;
+  return body;
 };
 
 interface Props {
@@ -31,11 +32,11 @@ interface Props {
 const Project: React.FC<Props> = ({ project }: Props): JSX.Element => {
   return (
 	<SectionWrapper
+	  carded={true}
 	  children={
 		<div className="">
 		  {link(project)}
-		  <img src={process.env.PUBLIC_URL + project.image} alt="" />
-		  <p className="m-2 break-words text-md">{project.description}</p>
+		  <p className="px-8 py-2 break-words text-lg">{project.description}</p>
 		</div>
 	  }
 	/>

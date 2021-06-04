@@ -19,15 +19,16 @@ export const Title: React.FC<Props> = ({
   return (
     <div className="float-right text-right">
       <header className="text-3xl">{name}</header>
-      <p className="text-lg">{title}</p>
-
-      <div className="float-right flex pt-3 pb-2">
-        <div className="flex items-center justify-center">
-          <Links links={links} />
+      <div className="mr-4">
+        <p className="text-lg">{title}</p>
+        <div className="float-right flex pt-3 pb-2">
+          <div className="flex items-center justify-center">
+            <Links links={links} />
+          </div>
+          <Image image={image} />
         </div>
-        <Image image={image} />
+        {location ? <p className="text-md">{location}</p> : null}
       </div>
-      {location ? <p className="text-md">{location}</p> : null}
     </div>
   );
 };

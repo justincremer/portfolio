@@ -3,23 +3,23 @@ import { SectionWrapper } from "../wrappers";
 
 interface Exp {
   name: string;
-  link: string | null;
+  link?: string;
 }
 
-const link = (i: Exp): JSX.Element => {
-  if (i.link !== null) {
+const link = (e: Exp): JSX.Element => {
+  if (e.link) {
 	return (
 	  <a
-		href={i.link}
+		href={e.link}
 		target="blank"
 		className="text-blue-800 hover:text-blue-500"
 	  >
-		{i.name}
+		{e.name}
 	  </a>
 	);
   }
 
-  return <>{i.name}</>;
+  return <>{e.name}</>;
 };
 
 const knownList = (known: Array<Exp>): JSX.Element => (
@@ -42,7 +42,7 @@ const workingOnList = (known: Array<Exp>): JSX.Element => {
 	  );
 	case 3:
 	  return (
-		<p>
+		<p className="text-lg">
 		  Currently learning {link(known[0])}, {link(known[1])}, and{" "}
 		  {link(known[2])}.
 		</p>
@@ -65,6 +65,7 @@ export const Experience: React.FC<ExpList> = ({
 	<div>
 	  <SectionHeader title="Experience" />
 	  <SectionWrapper
+		carded={true}
 		children={
 		  <div className="pt-4">
 			<div className="justify-evenly mb-4 text-xl">
