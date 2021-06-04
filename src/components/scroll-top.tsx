@@ -25,7 +25,7 @@ export const ScrollTop: React.FC = (): JSX.Element | null => {
 	<div className="fixed z-20 w-full flex items-center justify-center left-0">
 	  <button
 		onClick={scrollToTop}
-		className="w-25 p-2 text-center bg-gray-300 text-black border border-black rounded-xl"
+		className="w-25 p-2 text-center bg-gray-100 text-black border border-black rounded-xl"
 	  >
 		Scroll To Top
 	  </button>
