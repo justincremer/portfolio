@@ -9,7 +9,11 @@ interface Exp {
 const link = (i: Exp): JSX.Element => {
   if (i.link !== null) {
 	return (
-	  <a href={i.link} target="blank" className="hover:text-yellow-300">
+	  <a
+		href={i.link}
+		target="blank"
+		className="text-blue-800 hover:text-blue-500"
+	  >
 		{i.name}
 	  </a>
 	);

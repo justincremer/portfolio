@@ -22,13 +22,15 @@ export const ScrollTop: React.FC = (): JSX.Element | null => {
   window.addEventListener("scroll", toggleVisibile);
 
   return visible ? (
-	<div className="fixed z-20 w-full flex items-center justify-center left-0">
-	  <button
-		onClick={scrollToTop}
-		className="w-25 p-2 text-center bg-gray-100 text-black border border-black rounded-xl"
-	  >
-		Scroll To Top
-	  </button>
+	<div className="fixed w-full flex items-center justify-center left-0">
+	  <div className=" z-20 animate-pulse">
+		<button
+		  onClick={scrollToTop}
+		  className="w-25 p-2 text-center bg-gray-100 text-black border border-black rounded-xl"
+		>
+		  Scroll To Top
+		</button>
+	  </div>
 	</div>
   ) : null;
 };

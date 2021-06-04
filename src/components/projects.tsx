@@ -11,7 +11,11 @@ export type Project = {
 const link = (p: Project): JSX.Element => {
   if (p.url !== null) {
 	return (
-	  <a href={p.url} target="blank" className="text-xl hover:text-yellow-300">
+	  <a
+		href={p.url}
+		target="blank"
+		className="text-xl text-blue-800 hover:text-blue-500"
+	  >
 		{p.title}
 	  </a>
 	);
