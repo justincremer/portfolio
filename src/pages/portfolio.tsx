@@ -1,5 +1,5 @@
 import { Header, Experience, Projects, Footer } from "../components";
-import type { Link, ExpList, Project } from "../components";
+import type { ILink, ExpList, IProject } from "../components";
 
 export type Config = {
   name: string;
@@ -7,9 +7,9 @@ export type Config = {
   location?: string;
   image: string;
   about: string;
-  links?: Array<Link>;
+  links?: Array<ILink>;
   experience: ExpList;
-  projects?: Array<Project>;
+  projects?: Array<IProject>;
 };
 
 interface Props {
@@ -23,7 +23,7 @@ export const Portfolio: React.FC<Props> = ({ config }: Props): JSX.Element => {
 		<Header
 		  name={config.name}
 		  title={config.title}
-		  location={config.location}
+		  location={config.location!}
 		  image={config.image}
 		  about={config.about}
 		  links={config.links}
