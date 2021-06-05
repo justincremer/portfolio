@@ -1,12 +1,12 @@
 import { Image } from "./image";
-import { Links, Link } from "./links";
+import { Links, ILink } from "./links";
 
 export interface Props {
   name: string;
   title: string;
   location?: string;
   image?: string;
-  links: Array<Link>;
+  links: Array<ILink>;
 }
 
 export const Title: React.FC<Props> = ({
@@ -25,7 +25,7 @@ export const Title: React.FC<Props> = ({
           <div className="flex items-center justify-center">
             <Links links={links} />
           </div>
-          <Image image={image} />
+          {image ? <Image image={image} /> : null}
         </div>
         {location ? <p className="text-md">{location}</p> : null}
       </div>
