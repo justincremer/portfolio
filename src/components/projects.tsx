@@ -26,16 +26,17 @@ const link = (p: IProject): JSX.Element => {
   return body;
 };
 
-interface Props {
+interface IProjectProps {
   project: IProject;
+  maxLength: number;
 }
 
-const Project: React.FC<Props> = ({ project }: Props): JSX.Element => {
+const Project: React.FC<IProjectProps> = ({ project, maxLength }: IProjectProps): JSX.Element => { 
 	const [expanded, setExpanded] = useState(true);
-	const [content, setContent] = useState(project.description.slice(0, 301));
+	const [content, setContent] = useState(project.description.slice(0, maxLength + 1));
 	
 	function expansionHandler() {
-		setContent(expanded ? project.description : project.description.slice(0, 301));
+		setContent(expanded ? project.description : project.description.slice(0, maxLength + 1));
 		setExpanded(!expanded);
 	}
 
@@ -46,7 +47,7 @@ const Project: React.FC<Props> = ({ project }: Props): JSX.Element => {
 			<div>
 				{link(project)}
 				<p className="px-8 py-2 break-words text-lg">{content}</p>
-				{project.description.length > 300 ? <div className="w-full flex items-center justify-center left-0">
+				{project.description.length > maxLength ? <div className="w-full flex items-center justify-center left-0">
 					<div className=" z-20 animate-pulse">
 						<button onClick={expansionHandler}>{expanded ? "more" : "less" }</button>
 					</div>
@@ -58,18 +59,20 @@ const Project: React.FC<Props> = ({ project }: Props): JSX.Element => {
 };
 
 interface ListProps {
-  projects?: Array<IProject> | undefined;
+  projects?: Array<IProject>;
+  maxLength: number;
 }
 
 export const Projects: React.FC<ListProps> = ({
   projects,
+  maxLength,
 }: ListProps): JSX.Element => {
   if (projects !== undefined) {
 	return (
 	  <div>
 		<SectionHeader title="Projects" />
 		{projects.map((p: IProject) => (
-		  <Project project={p} />
+		  <Project project={p} maxLength={maxLength}/>
 		))}
 	  </div>
 	);

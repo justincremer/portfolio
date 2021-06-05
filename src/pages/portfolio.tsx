@@ -10,6 +10,7 @@ export type Config = {
   links?: Array<ILink>;
   experience: ExpList;
   projects?: Array<IProject>;
+  maxProjectDescriptionLength: number;
 };
 
 interface Props {
@@ -36,7 +37,7 @@ export const Portfolio: React.FC<Props> = ({ config }: Props): JSX.Element => {
 		/>
 	  </div>
 	  <div id="Projects" className="mb-8">
-		<Projects projects={config.projects} />
+		<Projects projects={config.projects!} maxLength={config.maxProjectDescriptionLength}/>
 	  </div>
 	  <Footer />
 	</div>

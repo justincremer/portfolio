@@ -77,6 +77,7 @@ export const App: React.FC = (): JSX.Element => {
         return res;
       })(10)
     ),
+    maxProjectDescriptionLength: 300,
   };
 
   return (
