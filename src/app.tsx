@@ -43,8 +43,6 @@ export const App: React.FC = (): JSX.Element => {
         { name: "Flutter", link: "https://flutter.dev/" },
         { name: "Python", link: "https://www.python.org/" },
         { name: "Golang", link: "https://golang.org/" },
-        { name: "Python", link: "https://www.python.org/" },
-        // { name: "Python" },
         { name: "Docker", link: "https://www.docker.com/" },
         { name: "GNU/Linux", link: "https://www.gnu.org/" },
         {

@@ -23,12 +23,14 @@ export const ScrollTop: React.FC = (): JSX.Element | null => {
 
   return visible ? (
 	<div className="fixed w-full flex items-center justify-center left-0">
-	  <div className=" z-20 animate-pulse">
+	  <div className=" z-20">
 		<button
 		  onClick={scrollToTop}
 		  className="w-25 p-2 text-center bg-gray-100 text-black border border-black rounded-xl"
 		>
+			<p className="animate-pulse">
 		  Scroll To Top
+		  </p>
 		</button>
 	  </div>
 	</div>

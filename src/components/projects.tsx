@@ -49,7 +49,7 @@ const Project: React.FC<IProjectProps> = ({ project, maxLength }: IProjectProps)
 				<p className="px-8 py-2 break-words text-lg">{content}</p>
 				{project.description.length > maxLength ? <div className="w-full flex items-center justify-center left-0">
 					<div className=" z-20 animate-pulse">
-						<button onClick={expansionHandler}>{expanded ? "more" : "less" }</button>
+						<button onClick={expansionHandler}>read {expanded ? "more" : "less" }</button>
 					</div>
 				</div> : null}
 			</div>
