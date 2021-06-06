@@ -31,20 +31,27 @@ const knownList = (known: Array<Exp>): JSX.Element => (
 );
 
 const workingOnList = (known: Array<Exp>): JSX.Element => {
+  const prefix = "I'm currently learning ";
   switch (known.length) {
 	case 1:
-	  return <p>Currently learning {link(known[0])}.</p>;
+	  return (
+		<p>
+		  {prefix}
+		  {link(known[0])}.
+		</p>
+	  );
 	case 2:
 	  return (
 		<p>
-		  Currently learning {link(known[0])} and {link(known[1])}.
+		  {prefix}
+		  {link(known[0])} and {link(known[1])}.
 		</p>
 	  );
 	case 3:
 	  return (
 		<p className="text-lg">
-		  Currently learning {link(known[0])}, {link(known[1])}, and{" "}
-		  {link(known[2])}.
+		  {prefix}
+		  {link(known[0])}, {link(known[1])}, and {link(known[2])}.
 		</p>
 	  );
 	default:

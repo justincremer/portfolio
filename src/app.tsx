@@ -10,6 +10,7 @@ import {
 
 import { genRandString } from "./utils";
 
+// TODO: if project description length is greater than 500 characters, cut it off and add ... and a read more button.
 export const App: React.FC = (): JSX.Element => {
   const iconSize: number = 35;
   const config: Config = {
@@ -41,9 +42,13 @@ export const App: React.FC = (): JSX.Element => {
         { name: "Tailwind", link: "https://tailwindcss.com/" },
         { name: "Dart", link: "https://dart.dev/" },
         { name: "Flutter", link: "https://flutter.dev/" },
+        { name: "Python", link: "https://www.python.org/" },
         { name: "Golang", link: "https://golang.org/" },
+<<<<<<< Updated upstream
         { name: "Python", link: "https://www.python.org/" },
         // { name: "Python" },
+=======
+>>>>>>> Stashed changes
         { name: "Docker", link: "https://www.docker.com/" },
         { name: "GNU/Linux", link: "https://www.gnu.org/" },
         {
@@ -62,7 +67,47 @@ export const App: React.FC = (): JSX.Element => {
         title: "Pron",
         url: "https://github.com/justincremer/pron",
         description:
-          "An extensible personal cron tab, supporting the arbitrary execution of external programs, as well as hand rolled internal methods.  Pron runs as a sys daemon under linux and macOS, including utilities for logging and monitoring process status information.",
+          "An extensible personal cron tab, supporting the arbitrary execution of external programs, as well as hand rolled internal programs, configured in a mannor similar to suckless utilities.  Pron runs as a sys daemon under linux and macOS, including utilities for logging and monitoring process status information.",
+      },
+      {
+        title: "Sudoku Solver",
+        url: "https://github.com/justincremer/sudoku-solver",
+        description: "",
+      },
+      {
+        title: "Lisp Interpreter",
+        url: "https://github.com/justincremer/lisp-interpreter",
+        description: "",
+      },
+      {
+        title: "Key Value Store",
+        url: "https://github.com/justincremer/kvs",
+        description: "",
+      },
+      {
+        title: "Graveyard",
+        url: "https://github.com/justincremer/graveyard",
+        description: "",
+      },
+      {
+        title: "Book Store",
+        url: "https://github.com/justincremer/book-store",
+        description: "",
+      },
+      {
+        title: "Space",
+        url: "https://github.com/aaronTheZinc/Space",
+        description: "",
+      },
+      {
+        title: "Lexical Parser",
+        url: "https://github.com/justincremer/lexical-parser",
+        description: "",
+      },
+      {
+        title: "Go Rest/Orm Practice",
+        url: "https://github.com/justincremer/go-orm",
+        description: "",
       },
     ].concat(
       ((n): any => {
@@ -75,7 +120,7 @@ export const App: React.FC = (): JSX.Element => {
           });
         }
         return res;
-      })(10)
+      })(3)
     ),
     maxProjectDescriptionLength: 300,
   };
