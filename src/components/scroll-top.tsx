@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BsArrowUp as ArrowUp } from "react-icons/bs";
 
 export const ScrollTop: React.FC = (): JSX.Element | null => {
   const [visible, setVisible] = useState(false);
@@ -28,9 +29,10 @@ export const ScrollTop: React.FC = (): JSX.Element | null => {
 		  onClick={scrollToTop}
 		  className="w-25 p-2 text-center bg-gray-100 text-black border border-black rounded-xl"
 		>
-			<p className="animate-pulse">
-		  Scroll To Top
-		  </p>
+		  <div className="animate-pulse">
+			<ArrowUp className="justify-content-center" />
+			{/* <p>Scroll To Top</p> */}
+		  </div>
 		</button>
 	  </div>
 	</div>

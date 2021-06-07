@@ -109,14 +109,14 @@ export const App: React.FC = (): JSX.Element => {
         for (let i: number = 0; i < n; i++) {
           res.push({
             title: `Project ${i + 1}`,
-            description: genRandString(500),
+            description: genRandString(1000),
             url: "https://github.com/justincremer",
           });
         }
         return res;
       })(3)
     ),
-    maxProjectDescriptionLength: 300,
+    maxProjectDescriptionLength: 500,
   };
 
   return (
