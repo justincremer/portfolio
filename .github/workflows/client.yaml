@@ -4,7 +4,7 @@ on:
         branches:
             - main
         paths:
-            - client/**
+            - src/**
 jobs:
     build:
         name: Deploy
@@ -13,8 +13,8 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v2
             - name: Build prod
-              run: docker-compose build
+              run: docker-compose -f dev/docker-compose.prod.yml build
             - name: Run prod
-              run: docker-compose up -d
+              run: docker-compose -f dev/docker-compose.prod.yml up -d
             - name: Prune old image caches
               run: docker image prune -f
