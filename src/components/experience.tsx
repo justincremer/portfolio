@@ -73,7 +73,7 @@ export const Experience: React.FC<ExpList> = ({
 	  <SectionHeader title="Experience" />
 	  <SectionWrapper
 		carded={true}
-		children={
+		child={
 		  <div className="pt-4">
 			<div className="justify-evenly mb-4 text-xl">
 			  {knownList(known)}

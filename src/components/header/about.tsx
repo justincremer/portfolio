@@ -11,7 +11,7 @@ export const About: React.FC<Props> = ({ content }: Props): JSX.Element => {
 	  <SectionHeader title="About Me" />
 	  <SectionWrapper
 		carded={true}
-		children={<p className="px-2 text-md break-words">{content}</p>}
+		child={<p className="px-2 break-words text-lg">{content}</p>}
 	  />
 	</div>
   );

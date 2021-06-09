@@ -56,19 +56,17 @@ const ExpandableProject: React.FC<IProjectProps> = ({
   return (
     <SectionWrapper
       carded={true}
-      children={
+      child={
         <div>
           {link(project)}
           <p className="px-8 py-2 break-words text-lg">{content}</p>
-          {project.description.length > maxLength ? (
-            <div className="w-full flex items-center justify-center left-0">
-              <div className=" z-20 animate-pulse">
-                <button onClick={expansionHandler}>
-                  {expanded ? <ArrowDown /> : <ArrowUp />}
-                </button>
-              </div>
+          <div className="w-full flex items-center justify-center left-0">
+            <div className=" z-20 animate-pulse">
+              <button onClick={expansionHandler}>
+                {expanded ? <ArrowDown /> : <ArrowUp />}
+              </button>
             </div>
-          ) : null}
+          </div>
         </div>
       }
     />
@@ -81,7 +79,7 @@ const Project: React.FC<IProjectProps> = ({
   return (
     <SectionWrapper
       carded={true}
-      children={
+      child={
         <div>
           {link(project)}
           <p className="px-8 py-2 break-words text-lg">{project.description}</p>
