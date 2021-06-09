@@ -1,5 +1,5 @@
-import { Header, Experience, Projects, Footer } from "../components";
-import type { ILink, ExpList, IProject } from "../components";
+import { Header, Experience, Projects, Footer } from "../../components";
+import type { ILink, ExpList, IProject } from "../../components";
 
 export type Config = {
   name: string;
@@ -37,7 +37,10 @@ export const Portfolio: React.FC<Props> = ({ config }: Props): JSX.Element => {
 		/>
 	  </div>
 	  <div id="Projects" className="mb-8">
-		<Projects projects={config.projects!} maxLength={config.maxProjectDescriptionLength}/>
+		<Projects
+		  projects={config.projects!}
+		  maxLength={config.maxProjectDescriptionLength}
+		/>
 	  </div>
 	  <Footer />
 	</div>
