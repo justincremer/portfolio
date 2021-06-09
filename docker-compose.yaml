@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+    xiubox-client:
+        image: xiubox-client
+        container_name: xiubox-client
+        build:
+            context: client
+            dockerfile: dockerfile
+        ports:
+            - 80:3000
+        stdin_open: true
+        restart: on-failure

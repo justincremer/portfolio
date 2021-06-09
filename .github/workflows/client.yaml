@@ -1,0 +1,20 @@
+name: Client
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - client/**
+jobs:
+    build:
+        name: Deploy
+        runs-on: self-hosted
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            - name: Build prod
+              run: docker-compose build
+            - name: Run prod
+              run: docker-compose up -d
+            - name: Prune old image caches
+              run: docker image prune -f
