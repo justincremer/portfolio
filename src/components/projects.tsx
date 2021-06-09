@@ -38,21 +38,18 @@ interface IProjectProps {
   maxLength: number;
 }
 
-const Project: React.FC<IProjectProps> = ({
+const ExpandableProject: React.FC<IProjectProps> = ({
   project,
   maxLength,
 }: IProjectProps): JSX.Element => {
+  const partialDescription =
+    project.description.slice(0, maxLength + 1) + "...";
+
   const [expanded, setExpanded] = useState(true);
-  const [content, setContent] = useState(
-    project.description.slice(0, maxLength + 1)
-  );
+  const [content, setContent] = useState(partialDescription);
 
   function expansionHandler() {
-    setContent(
-      expanded
-        ? project.description
-        : project.description.slice(0, maxLength + 1)
-    );
+    setContent(expanded ? project.description : partialDescription);
     setExpanded(!expanded);
   }
 
@@ -78,6 +75,22 @@ const Project: React.FC<IProjectProps> = ({
   );
 };
 
+const Project: React.FC<IProjectProps> = ({
+  project,
+}: IProjectProps): JSX.Element => {
+  return (
+    <SectionWrapper
+      carded={true}
+      children={
+        <div>
+          {link(project)}
+          <p className="px-8 py-2 break-words text-lg">{project.description}</p>
+        </div>
+      }
+    />
+  );
+};
+
 interface ListProps {
   projects?: Array<IProject>;
   maxLength: number;
@@ -91,9 +104,13 @@ export const Projects: React.FC<ListProps> = ({
     return (
       <div>
         <SectionHeader title="Projects" />
-        {projects.map((p: IProject) => (
-          <Project project={p} maxLength={maxLength} />
-        ))}
+        {projects.map((p: IProject) =>
+          p.description.length > maxLength ? (
+            <ExpandableProject project={p} maxLength={maxLength} />
+          ) : (
+            <Project project={p} maxLength={maxLength} />
+          )
+        )}
       </div>
     );
   }
