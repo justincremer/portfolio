@@ -14,20 +14,23 @@ export interface IProject {
 }
 
 const link = (p: IProject): JSX.Element => {
-  const body = <p className="px-2 text-xl">{p.title}</p>;
+  const body = (body: JSX.Element | string): JSX.Element => (
+    <p className="px-2 text-xl">{body}</p>
+  );
+
   if (p.url) {
-    return (
+    return body(
       <a
         href={p.url}
         target="blank"
         className="text-xl text-blue-800 hover:text-blue-500"
       >
-        {body}
+        {p.title}
       </a>
     );
   }
 
-  return body;
+  return body(p.title);
 };
 
 interface IProjectProps {
