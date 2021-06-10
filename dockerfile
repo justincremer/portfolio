@@ -6,7 +6,7 @@ COPY package.json .
 COPY yarn.lock .
 RUN yarn -s
 RUN yarn global add react-scripts -s
-COPY . ./
+COPY . .
 
 # start
 CMD ["yarn", "start"]
