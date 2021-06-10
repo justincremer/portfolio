@@ -116,7 +116,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 		  });
 		}
 		return res;
-	  })(0)
+	  })(1)
 	),
 	maxProjectDescriptionLength: 500,
   };
