@@ -19,19 +19,21 @@ export const Header: React.FC<Props> = ({
   links,
 }: Props): JSX.Element => {
   return (
-	<div className="md:flex">
-	  <div className="w-3/4">
-		<About content={about} />
-	  </div>
-	  <div className="w-1/4">
-		<Title
-		  name={name}
-		  title={title}
-		  location={location}
-		  image={image}
-		  links={links}
-		/>
-	  </div>
-	</div>
+    <div className=" lg:flex">
+      <div className="flex justify-center order-2 xl:ml-10 ">
+        <Title
+          name={name}
+          title={title}
+          location={location}
+          image={image}
+          links={links}
+        />
+      </div>
+      <div className="sm:w-10/10 lg:w-3/4 self-center md:order-1 ">
+        <div className="">
+        <About content={about} />
+        </div>
+      </div>
+    </div>
   );
 };

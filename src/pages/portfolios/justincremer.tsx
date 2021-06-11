@@ -122,7 +122,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
   };
 
   return (
-	<div>
+	<div className=" 2xl:ml-60 2xl:mr-60">
 	  <PageWrapper children={<Portfolio config={config} />} />
 	</div>
   );

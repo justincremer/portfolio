@@ -20,7 +20,7 @@ interface Props {
 export const Portfolio: React.FC<Props> = ({ config }: Props): JSX.Element => {
   return (
 	<div>
-	  <div id="Header" className="mb-8">
+	  <div id="Header" className="mb-8  ">
 		<Header
 		  name={config.name}
 		  title={config.title}

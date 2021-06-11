@@ -17,7 +17,7 @@ export const Title: React.FC<Props> = ({
   links,
 }: Props): JSX.Element => {
   return (
-    <div className="float-right text-right">
+    <div className=" text-right xs:mt-5 sm:mt-5 md:-mt-5 ">
       <header className="text-3xl">{name}</header>
       <div className="mr-4">
         <p className="text-lg">{title}</p>

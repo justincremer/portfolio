@@ -9,6 +9,6 @@ export const PageWrapper: React.FC<Props> = ({
 }: Props): JSX.Element => (
   <div>
 	<ScrollTop />
-	<div className=" m-16">{children}</div>
+	<div className=" sm:p-7 md:p-16">{children}</div>
   </div>
 );
