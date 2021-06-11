@@ -20,7 +20,7 @@ export const Header: React.FC<Props> = ({
 }: Props): JSX.Element => {
   return (
     <div className=" lg:flex">
-      <div className="flex justify-center order-2 xl:ml-10 ">
+      <div className="flex justify-center lg:mt-10 order-2 xl:ml-10 ">
         <Title
           name={name}
           title={title}
@@ -31,7 +31,7 @@ export const Header: React.FC<Props> = ({
       </div>
       <div className="sm:w-10/10 lg:w-3/4 self-center md:order-1 ">
         <div className="">
-        <About content={about} />
+          <About content={about} />
         </div>
       </div>
     </div>
