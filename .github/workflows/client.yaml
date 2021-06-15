@@ -13,8 +13,8 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v2
             - name: Build prod
-              run: sudo docker-compose -f dev/docker-compose.yml build
+              run: docker-compose -f dev/docker-compose.yml build
             - name: Run prod
-              run: sudo docker-compose -f dev/docker-compose.yml up -d
+              run: docker-compose -f dev/docker-compose.yml up -d
             - name: Prune old image caches
-              run: sudo docker image prune -f
+              run: docker image prune -f
