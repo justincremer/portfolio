@@ -16,7 +16,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 	location: "San Diego, CA",
 	image: "profile.jpg",
 	about:
-	  "I am currently seeking opportunities to work collaboratively and expand my expertise in application architecture and web development. Skilled in defensive security and linux system administration, I have studied cyber security at UCSD, further refining my software development.  While proficient in a variety of languages and frameworks, I remain agnostic in my ability to deliver robust applications and services.",
+	  "I am currently seeking opportunities to work collaboratively and expand my expertise in application architecture and web development. Skilled in defensive security and linux system administration, I have studied cyber security at UCSD, building a cohesive set of mitigation strategies for any system.  While proficient in a variety of languages and frameworks, I remain agnostic in my ability to deliver robust applications and services.",
 	links: [
 	  {
 		url: "https://www.linkedin.com/in/justin-cremer-97870a1b0/",
