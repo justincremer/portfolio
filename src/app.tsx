@@ -1,11 +1,14 @@
-import { Route, BrowserRouter as Router } from "react-router-dom";
-import { JustinCremer, UnderConstruction } from "./pages";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { JustinCremer, UnderConstruction, NotFound } from "./pages";
 
 export const App: React.FC = (): JSX.Element => {
   return (
 	<Router>
-	  <Route path="/" exact component={UnderConstruction} />
-	  <Route path="/justincremer" component={JustinCremer} />
+	  <Switch>
+		<Route exact path="/" component={UnderConstruction} />
+		<Route path="/justincremer" component={JustinCremer} />
+		<Route path="*" component={NotFound}></Route>
+	  </Switch>
 	</Router>
   );
 };
