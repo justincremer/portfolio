@@ -71,7 +71,8 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 	  {
 		title: "Chimkin Bot",
 		url: "https://github.com/justincremer/chimkin-bot",
-		description: "add description",
+		description:
+		  "A server specific Discord bot utilizing the DiscordGo module.  In it's current rendition, Chimking Bot can perform a series of primitive read/write operations, though I am currently working on two features introducing the use of an external database.  One of these features is a (fake) currency system, which supplies members with a small sum of currency regularly on a timer.  This can be used to gamble, pay out other members, and to buy special prizes from Chimkin Bot.  The other feature is a smart repository for coordinates on our minecraft server.  This seeminly simple task has proved to be more complex, in that locations can result in both geographic and namespace collisions.  I've written a few simple algorithms for checking such issues and am working on a custom namespacing feature.",
 	  },
 	  {
 		title: "Lisp Interpreter",
@@ -100,15 +101,16 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 	  },
 
 	  {
-		title: "Go Rest/Orm Practice",
+		title: "Orm Practice",
 		url: "https://github.com/justincremer/go-orm",
-		description: "add description",
+		description:
+		  "An http api written in Go.  This was my first attempt to interact with a Postgres server using an ORM in Go and it worked quite nicely.  Native go structs allow for encoding decorators, for easy encoding and decoding of data.  This hyper minimal api utilizes such decorators to painlessly build out endpoints.",
 	  },
 	  {
 		title: "Graveyard",
 		url: "https://github.com/justincremer/graveyard",
 		description:
-		  "A monolithic collection of past projects and practice code i've written over the years.  The majority of these are written in C and non-idiomatic C++, but I push any and all insignificant abandoned projects, backups, and small programs I write when learning languages, into this repository.  Promptly named Graveyard, this is where I retire dead code before I scrub it from filesystem.",
+		  "A monolithic collection of past projects and practice code i've written over the years.  The majority of these are written in C and non-idiomatic C++, but I push any and all abandoned projects, backups, and small programs I write when learning languages, into this repository.  Promptly named Graveyard, this is where I retire dead code before I scrub it from my filesystem.",
 	  },
 	],
 	maxProjectDescriptionLength: 500,
