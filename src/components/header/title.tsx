@@ -1,6 +1,5 @@
 import { Image } from "./image";
 import { Links, ILink } from "./links";
-import { BiMap as Map } from "react-icons/bi";
 
 export interface Props {
   name: string;
