@@ -8,8 +8,6 @@ import {
   FaGithubSquare as Github,
 } from "react-icons/fa";
 
-import { genRandString } from "../../utils";
-
 export const JustinCremer: React.FC = (): JSX.Element => {
   const iconSize: number = 35;
   const config: Config = {
@@ -79,12 +77,33 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 	  {
 		title: "Lisp Interpreter",
 		url: "https://github.com/justincremer/lisp-interpreter",
-		description: genRandString(500),
+		description: "add description",
+	  },
+	  {
+		title: "Lexical Parser",
+		url: "https://github.com/justincremer/lexical-parser",
+		description: "add description",
+	  },
+	  {
+		title: "Book Store",
+		url: "https://github.com/justincremer/book-store",
+		description: "add description",
 	  },
 	  {
 		title: "Key Value Store",
 		url: "https://github.com/justincremer/kvs",
-		description: genRandString(500),
+		description: "add description",
+	  },
+	  {
+		title: "Space",
+		url: "https://github.com/aaronTheZinc/Space",
+		description: "add description",
+	  },
+
+	  {
+		title: "Go Rest/Orm Practice",
+		url: "https://github.com/justincremer/go-orm",
+		description: "add description",
 	  },
 	  {
 		title: "Graveyard",
@@ -92,39 +111,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 		description:
 		  "A monolithic collection of past projects and practice code i've written over the years.  The majority of these are written in C and non-idiomatic C++, but I push any and all insignificant abandoned projects, backups, and small programs I write when learning languages, into this repository.  Promptly named Graveyard, this is where I retire dead code before I scrub it from filesystem.",
 	  },
-	  {
-		title: "Book Store",
-		url: "https://github.com/justincremer/book-store",
-		description: genRandString(500),
-	  },
-	  {
-		title: "Space",
-		url: "https://github.com/aaronTheZinc/Space",
-		description: "",
-	  },
-	  {
-		title: "Lexical Parser",
-		url: "https://github.com/justincremer/lexical-parser",
-		description: "",
-	  },
-	  {
-		title: "Go Rest/Orm Practice",
-		url: "https://github.com/justincremer/go-orm",
-		description: "",
-	  },
-	].concat(
-	  ((n): any => {
-		let res: Array<any> = [];
-		for (let i: number = 0; i < n; i++) {
-		  res.push({
-			title: `Project ${i + 1}`,
-			description: genRandString(1000),
-			url: "https://github.com/justincremer",
-		  });
-		}
-		return res;
-	  })(1)
-	),
+	],
 	maxProjectDescriptionLength: 500,
   };
 
