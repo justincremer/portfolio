@@ -1,5 +1,6 @@
 import { Image } from "./image";
 import { Links, ILink } from "./links";
+import { BiMap as Map } from "react-icons/bi";
 
 export interface Props {
   name: string;
@@ -27,7 +28,7 @@ export const Title: React.FC<Props> = ({
           </div>
           {image ? <Image image={image} /> : null}
         </div>
-        {location ? <p className="text-md">{location}</p> : null}
+        {location ? <p className="ml-2 text-md">{location}</p> : null}
       </div>
     </div>
   );

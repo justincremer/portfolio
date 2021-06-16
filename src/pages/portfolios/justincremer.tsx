@@ -17,7 +17,8 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 	title: "Software Engineer",
 	location: "San Diego, CA",
 	image: "profile.jpg",
-	about: genRandString(500),
+	about:
+	  "I am currently seeking opportunities to work collaboratively and expand my expertise in application architecture and web development. Skilled in defensive security and linux system administration, I have studied cyber security at UCSD, further refining my software development.  While proficient in a variety of languages and frameworks, I remain agnostic in my ability to deliver robust applications and services.",
 	links: [
 	  {
 		url: "https://www.linkedin.com/in/justin-cremer-97870a1b0/",
@@ -66,6 +67,12 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 	  {
 		title: "Sudoku Solver",
 		url: "https://github.com/justincremer/sudoku-solver",
+		description:
+		  "Solves sudoku boards in a highly concurrent environment, using a tail recursive backtracking algorithm.  Unsolved boards are pulled from Utep's public api and encoded from json into a native go struct.  Pure functions exist for checking the occurance of a number withing a given row, column, and block.  For each cell of the board, if a given cell is unsolved, the sequential numbers (i.e. 1..9 for a 9x9 board) are tested against these three algorithms.  If the number does not exist within the bounds, it is placed in the given cell and the next cell is tested.  If an error occurs, the program backtracks to the previous tested cell, continuing along the list of potential numbers (ex. 5..9 if 4 was the previous number).  This is continued until all cells on the board are solved for.  It is not the fastest algorithm; nonetheless, it is significantlly faster than brute forcing - solving most hard 9x9 puzzles in milliseconds.  The solves are additionally written to run in individual goroutines, writing solve data concurrently over io channels.  This allows the program to solve hundreds of boards concurrently, in just seconds, limited only by the api's rate limiter.  I plan on writing my own board generator to allow for higher throughput of unsolved boards.  This will allow me to really throttle my program and do serious benchmarking.",
+	  },
+	  {
+		title: "Chimkin Bot",
+		url: "https://github.com/justincremer/chimkin-bot",
 		description:
 		  "Solves sudoku boards in a highly concurrent environment, using a tail recursive backtracking algorithm.  Unsolved boards are pulled from Utep's public api and encoded from json into a native go struct.  Pure functions exist for checking the occurance of a number withing a given row, column, and block.  For each cell of the board, if a given cell is unsolved, the sequential numbers (i.e. 1..9 for a 9x9 board) are tested against these three algorithms.  If the number does not exist within the bounds, it is placed in the given cell and the next cell is tested.  If an error occurs, the program backtracks to the previous tested cell, continuing along the list of potential numbers (ex. 5..9 if 4 was the previous number).  This is continued until all cells on the board are solved for.  It is not the fastest algorithm; nonetheless, it is significantlly faster than brute forcing - solving most hard 9x9 puzzles in milliseconds.  The solves are additionally written to run in individual goroutines, writing solve data concurrently over io channels.  This allows the program to solve hundreds of boards concurrently, in just seconds, limited only by the api's rate limiter.  I plan on writing my own board generator to allow for higher throughput of unsolved boards.  This will allow me to really throttle my program and do serious benchmarking.",
 	  },
