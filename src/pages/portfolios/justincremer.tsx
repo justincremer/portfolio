@@ -94,7 +94,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 		title: "Key Value Store",
 		url: "https://github.com/justincremer/kvs",
 		description:
-		  "A simple key value store written in Go, using Maps of symbols, which can be either alphanumeric symbols, or nested key value maps.  The current rendition includes a repl and support for serializing and deserializing session objects, allowing for saving and loading of Stores.",
+		  "A simple key value store written in Go, using Maps of symbols, which can be either alphanumeric or nested key value maps.  The current rendition includes a repl and support for serializing and deserializing session objects, allowing for saving and loading of Stores.",
 	  },
 	  {
 		title: "Space",
