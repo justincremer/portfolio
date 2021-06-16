@@ -77,7 +77,8 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 	  {
 		title: "Lisp Interpreter",
 		url: "https://github.com/justincremer/lisp-interpreter",
-		description: "add description",
+		description:
+		  "A toy Lisp interpreter written in javascript for the node runtime.  While there are certainly better languages and (definitely) runtimes for writing a Lisp interpreter.  I was writing a fair amount of javascript at the time and thought it would be both funny and a great exercise of precision to do such a project.  In its current state, the interpreter supports Car, Cons, and Cdr operations, as well as primitive mathematical and lambda functions, and alphanumeric symbols.  The interpreter comes with a repl and additionally supports external source code, as demostrated in the example lisp file.",
 	  },
 	  {
 		title: "Lexical Parser",
