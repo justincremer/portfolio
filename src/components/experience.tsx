@@ -25,7 +25,7 @@ const link = (e: Exp): JSX.Element => {
 const knownList = (known: Array<Exp>): JSX.Element => (
   <div className="flex flex-wrap">
 	{known.map((i: Exp) => (
-	  <p className="w-1/4 text-center">{link(i)}</p>
+	  <p className="w-1/3 md:w-1/4 text-center">{link(i)}</p>
 	))}
   </div>
 );
