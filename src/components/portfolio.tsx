@@ -1,5 +1,5 @@
-import { Header, Experience, Projects, Footer } from "../../components";
-import type { ILink, ExpList, IProject } from "../../components";
+import { Header, Experience, Projects, Footer } from ".";
+import type { ILink, ExpList, IProject } from ".";
 
 export type Config = {
   name: string;

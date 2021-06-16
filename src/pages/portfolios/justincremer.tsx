@@ -1,5 +1,5 @@
-import { Portfolio } from "./portfolio";
-import type { Config } from "./portfolio";
+import { Portfolio } from "../../components";
+import type { Config } from "../../components";
 import { PageWrapper } from "../../wrappers";
 
 import { AiOutlineMail as Email } from "react-icons/ai";
