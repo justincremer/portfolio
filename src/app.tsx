@@ -7,7 +7,7 @@ export const App: React.FC = (): JSX.Element => {
 	  <Switch>
 		<Route exact path="/" component={UnderConstruction} />
 		<Route path="/justincremer" component={JustinCremer} />
-		<Route path="*" component={NotFound}></Route>
+		<Route path="*" component={NotFound} />
 	  </Switch>
 	</Router>
   );
