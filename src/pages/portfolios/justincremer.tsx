@@ -116,7 +116,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 		  "A monolithic collection of past projects and practice code i've written over the years.  The majority of these are written in C and non-idiomatic C++, but I push any and all abandoned projects, backups, and small programs I write when learning languages, into this repository.  Promptly named Graveyard, this is where I retire dead code before I scrub it from my filesystem.",
 	  },
 	],
-	maxProjectDescriptionLength: 500,
+	maxProjectDescriptionLength: 350,
   };
 
   return (
