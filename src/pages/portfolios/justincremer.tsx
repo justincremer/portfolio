@@ -80,16 +80,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 		description:
 		  "A toy Lisp interpreter written in javascript for the node runtime.  While there are certainly better languages and (definitely) runtimes for writing a Lisp interpreter.  I was writing a fair amount of javascript at the time and thought it would be both funny and a great exercise of precision to do such a project.  In its current state, the interpreter supports Car, Cons, and Cdr operations, as well as primitive mathematical and lambda functions, and alphanumeric symbols.  The interpreter comes with a repl and additionally supports external source code, as demostrated in the example lisp file.",
 	  },
-	  {
-		title: "Lexical Parser",
-		url: "https://github.com/justincremer/lexical-parser",
-		description: "add description",
-	  },
-	  {
-		title: "Book Store",
-		url: "https://github.com/justincremer/book-store",
-		description: "add description",
-	  },
+
 	  {
 		title: "Key Value Store",
 		url: "https://github.com/justincremer/kvs",
@@ -114,6 +105,16 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 		url: "https://github.com/justincremer/graveyard",
 		description:
 		  "A monolithic collection of past projects and practice code i've written over the years.  The majority of these are written in C and non-idiomatic C++, but I push any and all abandoned projects, backups, and small programs I write when learning languages, into this repository.  Promptly named Graveyard, this is where I retire dead code before I scrub it from my filesystem.",
+	  },
+	  {
+		title: "Lexical Parser",
+		url: "https://github.com/justincremer/lexical-parser",
+		description: "add description",
+	  },
+	  {
+		title: "Book Store",
+		url: "https://github.com/justincremer/book-store",
+		description: "add description",
 	  },
 	],
 	maxProjectDescriptionLength: 350,
