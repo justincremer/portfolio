@@ -1,3 +1,3 @@
 # My Portofolio Website
 Written in React and styled with Tailwindcss.
-This will be hosted on xiubox.io/justincremer once I'm finished.
+A templated portfolio is built from a static json object at runtime.
