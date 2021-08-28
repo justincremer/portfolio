@@ -23,7 +23,7 @@ export const JustinCremer: React.FC = (): JSX.Element => {
 		icon: <LinkedIn size={iconSize} />,
 	  },
 	  {
-		url: "https://github.com/justincremer",
+		url: "https://github.com/xiuxiu62",
 		icon: <Github size={iconSize} />,
 	  },
 	  {
